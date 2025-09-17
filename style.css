@@ -710,10 +710,11 @@ body{
     .entry .details{
         position: relative;
         opacity: 0;
-        width: 97%;
+        width: 95%;
         height: 0px;
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         padding-right: 12px;
         padding-left: 3px;
         overflow: hidden;
@@ -725,7 +726,7 @@ body{
     .entry:hover .details{
         padding-top: 3px;
         opacity: 1;
-        height: 15px;
+        height: fit-content;
         padding-bottom: 6px;
     }
 
@@ -746,10 +747,11 @@ body{
     .entry .details .cd,.entry .details .dvd
     {
         position: relative;
-        padding-left: 19px;
-        height: 15px;
-        display: flex;
-        align-items: center;
+        padding-left: 16px;
+        min-height: 15px;
+        line-height: 15px;
+        height: fit-content;
+        max-width: 95%;
         padding-right: 3px;
         /*border: solid 2px yellow;*/
         background-color: #dbc9ee95;
@@ -757,6 +759,7 @@ body{
         margin-right: 3px;
         border-radius: 5px;
         /*background-image: linear-gradient(to top, #dbc9ee95,#dbc9ee00);*/
+        flex-shrink: 0;
     }
     .entry .details .image::before,.entry .details .video::before,.entry .details .audio::before,
     .entry .details .restriction::before,
@@ -764,11 +767,11 @@ body{
     .entry .details .cd::before,.entry .details .dvd::before
     {
         content: "";
-        width: 15px;
-        height: 15px;
+        width: 14px;
+        height: 14px;
         position: absolute;
-        left: 2.5px;
-        background-position: center;
+        left: 0px;
+        background-position: right;
         background-repeat: no-repeat;
         background-size: 85%;
     filter: drop-shadow(0.25px 0.25px 0.5px #a98ecad8);
